@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Lead - Webverse Innovators</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">🚀 Webverse Lead Enrichment</h1>
+            <ul class="nav-links">
+                <li><a href="/">Dashboard</a></li>
+                <li><a href="/new-lead" class="active">New Lead</a></li>
+                <li><a href="/leads">All Leads</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Add New Lead for Enrichment</h2>
+            <p class="subtitle">Enter lead information to generate comprehensive enrichment data and personalized email</p>
+
+            <form id="enrichment-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="company_name">Company Name *</label>
+                        <input type="text" id="company_name" name="company_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="website">Website URL *</label>
+                        <input type="url" id="website" name="website" placeholder="https://example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact_name">Contact Name *</label>
+                        <input type="text" id="contact_name" name="contact_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact_email">Contact Email *</label>
+                        <input type="email" id="contact_email" name="contact_email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="job_title">Job Title</label>
+                        <input type="text" id="job_title" name="job_title" placeholder="e.g., Director, CEO">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="industry">Industry *</label>
+                        <input type="text" id="industry" name="industry" required placeholder="e.g., Dental Health Care">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="linkedin_url">LinkedIn Profile URL</label>
+                        <input type="url" id="linkedin_url" name="linkedin_url" placeholder="https://linkedin.com/in/...">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" id="submit-btn">
+                        <span id="btn-text">🔍 Enrich Lead & Generate Email</span>
+                        <span id="btn-loading" style="display:none;">⏳ Processing...</span>
+                    </button>
+                </div>
+            </form>
+
+            <div id="result-container" style="display:none;">
+                <div class="success-message">
+                    <h3>✅ Lead Enriched Successfully!</h3>
+                    <p>View the full details and personalized email below.</p>
+                    <a href="#" id="view-lead-link" class="btn btn-secondary">View Full Lead Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/new_lead.js"></script>
+</body>
+</html>

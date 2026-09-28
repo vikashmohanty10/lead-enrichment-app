@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Details - Webverse Innovators</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">🚀 Webverse Lead Enrichment</h1>
+            <ul class="nav-links">
+                <li><a href="/">Dashboard</a></li>
+                <li><a href="/new-lead">New Lead</a></li>
+                <li><a href="/leads">All Leads</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="lead-header">
+            <div>
+                <h2 id="company-name">Loading...</h2>
+                <p id="company-industry" class="subtitle"></p>
+            </div>
+            <div class="lead-actions">
+                <select id="status-select" class="status-select">
+                    <option value="New">New</option>
+                    <option value="Contacted">Contacted</option>
+                    <option value="Qualified">Qualified</option>
+                    <option value="Proposal Sent">Proposal Sent</option>
+                    <option value="Won">Won</option>
+                    <option value="Lost">Lost</option>
+                </select>
+                <button class="btn btn-secondary" onclick="window.print()">📄 Print</button>
+            </div>
+        </div>
+
+        <div class="lead-grid">
+            <!-- Contact Information -->
+            <div class="card">
+                <h3>📧 Contact Information</h3>
+                <div class="info-row">
+                    <span class="label">Name:</span>
+                    <span id="contact-name">-</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Email:</span>
+                    <span id="contact-email">-</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Job Title:</span>
+                    <span id="job-title">-</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Website:</span>
+                    <a id="website" href="#" target="_blank">-</a>
+                </div>
+                <div class="info-row">
+                    <span class="label">LinkedIn:</span>
+                    <a id="linkedin" href="#" target="_blank">-</a>
+                </div>
+            </div>
+
+            <!-- Lead Scoring -->
+            <div class="card">
+                <h3>📊 Lead Scoring</h3>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <span id="lead-score" class="score-value">0</span>
+                        <span class="score-max">/10</span>
+                    </div>
+                    <div id="lead-tier" class="tier-badge">-</div>
+                </div>
+                <div class="info-row">
+                    <span class="label">Fit Score:</span>
+                    <span id="fit-score">-</span>
+                </div>
+            </div>
+
+            <!-- Recommended Services -->
+            <div class="card full-width">
+                <h3>✅ Recommended Services</h3>
+                <div id="services-list" class="services-list">
+                    <p>Loading...</p>
+                </div>
+            </div>
+
+            <!-- Pain Points -->
+            <div class="card full-width">
+                <h3>⚠️ Identified Pain Points</h3>
+                <div id="pain-points-list" class="pain-points-list">
+                    <p>Loading...</p>
+                </div>
+            </div>
+
+            <!-- Personalized Email -->
+            <div class="card full-width email-card">
+                <div class="card-header">
+                    <h3>✉️ Personalized Outreach Email</h3>
+                    <button class="btn btn-small" id="copy-email-btn">📋 Copy Email</button>
+                </div>
+                <div class="email-preview">
+                    <pre id="email-content">Loading...</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/lead_detail.js"></script>
+</body>
+</html>

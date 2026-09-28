@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Enrichment Dashboard - Webverse Innovators</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">🚀 Webverse Lead Enrichment</h1>
+            <ul class="nav-links">
+                <li><a href="/" class="active">Dashboard</a></li>
+                <li><a href="/new-lead">New Lead</a></li>
+                <li><a href="/leads">All Leads</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="dashboard-header">
+            <h2>Dashboard Overview</h2>
+            <a href="/new-lead" class="btn btn-primary">+ Add New Lead</a>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-info">
+                    <h3 id="total-leads">0</h3>
+                    <p>Total Leads</p>
+                </div>
+            </div>
+
+            <div class="stat-card hot">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-info">
+                    <h3 id="hot-leads">0</h3>
+                    <p>Hot Leads</p>
+                </div>
+            </div>
+
+            <div class="stat-card warm">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-info">
+                    <h3 id="warm-leads">0</h3>
+                    <p>Warm Leads</p>
+                </div>
+            </div>
+
+            <div class="stat-card cold">
+                <div class="stat-icon">❄️</div>
+                <div class="stat-info">
+                    <h3 id="cold-leads">0</h3>
+                    <p>Cold Leads</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="recent-leads">
+            <h3>Recent Leads</h3>
+            <div id="recent-leads-list">
+                <p class="loading">Loading leads...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+name: lead-enrichment-webverse
+runtime: python3.11
+entrypoint: python app.py
+env_variables:
+  FLASK_ENV: production

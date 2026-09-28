@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Leads - Webverse Innovators</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">🚀 Webverse Lead Enrichment</h1>
+            <ul class="nav-links">
+                <li><a href="/">Dashboard</a></li>
+                <li><a href="/new-lead">New Lead</a></li>
+                <li><a href="/leads" class="active">All Leads</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="dashboard-header">
+            <h2>All Leads</h2>
+            <a href="/new-lead" class="btn btn-primary">+ Add New Lead</a>
+        </div>
+
+        <div class="filter-bar">
+            <div class="search-box">
+                <input type="text" id="search" placeholder="🔍 Search by company or contact name...">
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Hot">🔥 Hot</button>
+                <button class="filter-btn" data-filter="Warm">⭐ Warm</button>
+                <button class="filter-btn" data-filter="Cold">❄️ Cold</button>
+            </div>
+        </div>
+
+        <div class="leads-table-container">
+            <table class="leads-table">
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Contact</th>
+                        <th>Industry</th>
+                        <th>Lead Score</th>
+                        <th>Tier</th>
+                        <th>Status</th>
+                        <th>Services</th>
+                        <th>Created</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="leads-table-body">
+                    <tr>
+                        <td colspan="9" class="loading">Loading leads...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="/static/js/leads_list.js"></script>
+</body>
+</html>
